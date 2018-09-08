@@ -37,7 +37,7 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 		notify.invoke("Executing\n request #" + r.toString());
 
 		if (r == 0) {
-			// "https://pwys.tmskfk.com/?minor=43&lat=49.399618&model=006-B2337-00&lon=15.579631&platform=garmin&aid=garmin-ZHZ11F1Z6XRUKCT9K8JFAEJH1&key=null&wid=garmin-ZHZ11F1Z6XRUKCT9K8JFAEJH1&format=array&email=null&provider=yr&v=12&major=0",
+			// FAILS
 
 			url = "https://pwys.tmskfk.com/";
 			params = {
@@ -59,6 +59,7 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 			params["key"] = null;
 			params["email"] = null;
 		} else if (r == 1) {
+			// OK
 			url = "https://pwys.tmskfk.com/";
 			params = {
 				"aid" => "garmin-123",
@@ -77,6 +78,7 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 				// (don't specify format)
 			};			
 		} else if (r == 2) {
+			// OK
 			url = "https://pwys.tmskfk.com/";
 			params = {
 				"aid" => "garmin-123",

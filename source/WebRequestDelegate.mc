@@ -99,14 +99,26 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 			url = "https://ssltest.tomaskafka.com/json";
 		}
 
+		var options = {
+			:method => Communications.HTTP_REQUEST_METHOD_GET,
+			:headers => {
+				"Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
+			},
+			:responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+		};		
+
+
 		Communications.makeWebRequest(
 			// "https://jsonplaceholder.typicode.com/todos/115",
 			// "https://ssltest.tomaskafka.com/json",
 			url,
 			params,
+			options,
+			/*
 			{
 					// "Content-Type" => Communications.REQUEST_CONTENT_TYPE_URL_ENCODED
 			},
+			*/
 			method(:onReceive)
 		);
 	}

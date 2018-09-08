@@ -60,6 +60,7 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 			params["email"] = null;
 		} else if (r == 1) {
 			// OK
+
 			url = "https://pwys.tmskfk.com/";
 			params = {
 				"aid" => "garmin-123",
@@ -79,6 +80,7 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 			};			
 		} else if (r == 2) {
 			// OK
+
 			url = "https://pwys.tmskfk.com/";
 			params = {
 				"aid" => "garmin-123",
@@ -96,6 +98,8 @@ class WebRequestDelegate extends WatchUi.BehaviorDelegate {
 				// (don't specify format)
 			};			
 		} else {
+			// OK
+			
 			url = "https://ssltest.tomaskafka.com/json";
 		}
 
